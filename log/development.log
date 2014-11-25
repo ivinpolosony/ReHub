@@ -1,0 +1,1628 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 21:34:11 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0.beta4/lib/rails/templates/rails/welcome/index.html.erb (24.3ms)
+Completed 200 OK in 312ms (Views: 278.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 21:40:18 +0000
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.0.beta4) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.0.beta4) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0.beta4) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0.beta4) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0.beta4) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0.beta4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0.beta4) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0.beta4) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0.beta) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0.beta) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.2.0.beta4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0.beta) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0.beta) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0.beta4) lib/rails/engine.rb:514:in `call'
+  railties (4.2.0.beta4) lib/rails/application.rb:161:in `call'
+  rack (1.6.0.beta) lib/rack/tempfile_reaper.rb:15:in `call'
+  rack (1.6.0.beta) lib/rack/lint.rb:49:in `_call'
+  rack (1.6.0.beta) lib/rack/lint.rb:37:in `call'
+  rack (1.6.0.beta) lib/rack/showexceptions.rb:24:in `call'
+  rack (1.6.0.beta) lib/rack/commonlogger.rb:33:in `call'
+  rack (1.6.0.beta) lib/rack/chunked.rb:54:in `call'
+  rack (1.6.0.beta) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0.beta) lib/rack/handler/webrick.rb:89:in `service'
+  /home/ivin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/ivin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/ivin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_source.erb (3.4ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (204.8ms)
+  [1m[36m (292.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (333.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20141124213635)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141124213635"]]
+  [1m[35m (324.4ms)[0m  commit transaction
+Migrating to CreateDatasources (20141124214007)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "datasources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "datasource_type" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141124214007"]]
+  [1m[35m (344.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 21:40:34 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.0.beta4/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 21:52:09 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Warning. Error encountered while saving cache db675c140da734e3491dfeec38b29c47ca6c7db4/datasources.css.scssc: can't dump anonymous class #<Class:0x00000001434058>
+
+Warning. Error encountered while saving cache db675c140da734e3491dfeec38b29c47ca6c7db4/scaffolds.css.scssc: can't dump anonymous class #<Class:0x00000001434058>
+
+Warning. Error encountered while saving cache db675c140da734e3491dfeec38b29c47ca6c7db4/search.css.scssc: can't dump anonymous class #<Class:0x00000001434058>
+
+Warning. Error encountered while saving cache db675c140da734e3491dfeec38b29c47ca6c7db4/users.css.scssc: can't dump anonymous class #<Class:0x00000001434058>
+
+Completed 200 OK in 2448ms (Views: 2445.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 21:52:11 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-24 21:52:11 +0000
+
+
+Started GET "/assets/search-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 21:52:11 +0000
+
+
+Started GET "/assets/application-fbaaee5a1bac8ded4400bcc095d82cac.css?body=1" for 127.0.0.1 at 2014-11-24 21:52:11 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 21:52:11 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 21:52:11 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 21:52:11 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 21:52:11 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-24 21:52:11 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-24 21:52:11 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-24 21:52:11 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-24 21:52:11 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 21:52:22 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 65ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 21:52:22 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-24 21:52:22 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-24 21:52:22 +0000
+
+
+Started GET "/assets/application-fbaaee5a1bac8ded4400bcc095d82cac.css?body=1" for 127.0.0.1 at 2014-11-24 21:52:22 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 21:52:22 +0000
+
+
+Started GET "/assets/search-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 21:52:22 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-24 21:52:22 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-24 21:52:22 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 21:52:22 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 21:52:22 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 21:52:22 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-24 21:52:22 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 21:53:49 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 66ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 21:53:49 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-24 21:53:49 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-24 21:53:49 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 21:53:49 +0000
+
+
+Started GET "/assets/application-fbaaee5a1bac8ded4400bcc095d82cac.css?body=1" for 127.0.0.1 at 2014-11-24 21:53:49 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-24 21:53:49 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-24 21:53:49 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 21:53:49 +0000
+
+
+Started GET "/assets/search-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 21:53:49 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 21:53:49 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 21:53:49 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-24 21:53:49 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 21:56:14 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 71ms (Views: 70.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 21:56:14 +0000
+
+
+Started GET "/assets/search-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 21:56:14 +0000
+
+
+Started GET "/assets/application-fbaaee5a1bac8ded4400bcc095d82cac.css?body=1" for 127.0.0.1 at 2014-11-24 21:56:14 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 21:56:14 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-24 21:56:14 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-24 21:56:14 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-24 21:56:14 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 21:56:14 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-24 21:56:14 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 21:56:14 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 21:56:14 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-24 21:56:14 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 22:02:36 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 18ms
+
+Sprockets::FileNotFound (couldn't find file 'jquery'
+  (in /home/ivin/Desktop/Dropbox/Ruby/rehub/app/assets/stylesheets/application.css.sass:16)):
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1648316315476453533_70211884438160'
+
+
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_source.erb (5.9ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (19.9ms)
+
+
+Started POST "/console/repl_sessions/a83a11e2bd089f5877db2cc5c40eef79/trace" for 127.0.0.1 at 2014-11-24 22:12:32 +0000
+
+ActionController::RoutingError (No route matches [POST] "/console/repl_sessions/a83a11e2bd089f5877db2cc5c40eef79/trace"):
+  web-console (2.0.0.beta4) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0.beta4) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0.beta) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0.beta) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.2.0.beta4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0.beta) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0.beta) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0.beta4) lib/rails/engine.rb:514:in `call'
+  railties (4.2.0.beta4) lib/rails/application.rb:161:in `call'
+  rack (1.6.0.beta) lib/rack/tempfile_reaper.rb:15:in `call'
+  rack (1.6.0.beta) lib/rack/lint.rb:49:in `_call'
+  rack (1.6.0.beta) lib/rack/lint.rb:37:in `call'
+  rack (1.6.0.beta) lib/rack/showexceptions.rb:24:in `call'
+  rack (1.6.0.beta) lib/rack/commonlogger.rb:33:in `call'
+  rack (1.6.0.beta) lib/rack/chunked.rb:54:in `call'
+  rack (1.6.0.beta) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0.beta) lib/rack/handler/webrick.rb:89:in `service'
+  /home/ivin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/ivin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/ivin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/routes/_route.html.erb (1.3ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/routes/_table.html.erb (208.3ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (354.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 22:17:48 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 36ms
+
+Sprockets::FileNotFound (couldn't find file 'jquery'
+  (in /home/ivin/Desktop/Dropbox/Ruby/rehub/app/assets/stylesheets/application.css.sass:16)):
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb___1648316315476453533_70211891315100'
+
+
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_source.erb (6.1ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (20.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 22:18:19 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 21ms
+
+Sprockets::FileNotFound (couldn't find file 'jquery'
+  (in /home/ivin/Desktop/Dropbox/Ruby/rehub/app/assets/stylesheets/application.css.sass:16)):
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1648316315476453533_24483220'
+
+
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_source.erb (6.3ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (20.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 22:18:19 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 12ms
+
+Sprockets::FileNotFound (couldn't find file 'jquery'
+  (in /home/ivin/Desktop/Dropbox/Ruby/rehub/app/assets/stylesheets/application.css.sass:16)):
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1648316315476453533_24483220'
+
+
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_source.erb (5.8ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (20.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 23:50:23 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 15ms
+
+Sprockets::FileNotFound (couldn't find file 'jquery'
+  (in /home/ivin/Desktop/Dropbox/Ruby/rehub/app/assets/stylesheets/application.css.sass:16)):
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1648316315476453533_70211882524260'
+
+
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_source.erb (12.4ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (27.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 23:50:42 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 76ms (Views: 75.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 23:50:42 +0000
+
+
+Started GET "/assets/search-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 23:50:42 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-24 23:50:42 +0000
+
+
+Started GET "/assets/application-9168604a64a0d31ed5d3dd84cbf09ab0.css?body=1" for 127.0.0.1 at 2014-11-24 23:50:42 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-24 23:50:42 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 23:50:42 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-24 23:50:42 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-24 23:50:42 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:50:42 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:50:42 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-24 23:50:42 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:50:42 +0000
+
+
+Started POST "/search/index" for 127.0.0.1 at 2014-11-24 23:50:45 +0000
+
+ActionController::RoutingError (No route matches [POST] "/search/index"):
+  web-console (2.0.0.beta4) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0.beta4) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0.beta) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0.beta) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.2.0.beta4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0.beta) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0.beta) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0.beta4) lib/rails/engine.rb:514:in `call'
+  railties (4.2.0.beta4) lib/rails/application.rb:161:in `call'
+  rack (1.6.0.beta) lib/rack/tempfile_reaper.rb:15:in `call'
+  rack (1.6.0.beta) lib/rack/lint.rb:49:in `_call'
+  rack (1.6.0.beta) lib/rack/lint.rb:37:in `call'
+  rack (1.6.0.beta) lib/rack/showexceptions.rb:24:in `call'
+  rack (1.6.0.beta) lib/rack/commonlogger.rb:33:in `call'
+  rack (1.6.0.beta) lib/rack/chunked.rb:54:in `call'
+  rack (1.6.0.beta) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0.beta) lib/rack/handler/webrick.rb:89:in `service'
+  /home/ivin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/ivin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/ivin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/routes/_route.html.erb (1.7ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (18.7ms)
+
+
+Started POST "/search/index" for 127.0.0.1 at 2014-11-24 23:51:10 +0000
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b+G/DvGSup3i1y4nNbkg3YUWKKK9NCcB0hKoStzYlse7ZHdfSyeKR7pAIH1Kysn8YGJxeUriSqnjaxqXIyMhaA=="}
+  Rendered search/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 69ms (Views: 68.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 23:51:10 +0000
+
+
+Started GET "/assets/search-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 23:51:10 +0000
+
+
+Started GET "/assets/application-9168604a64a0d31ed5d3dd84cbf09ab0.css?body=1" for 127.0.0.1 at 2014-11-24 23:51:10 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-24 23:51:10 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-24 23:51:10 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 23:51:10 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-24 23:51:10 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:51:10 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-24 23:51:10 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:51:10 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:51:10 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-24 23:51:10 +0000
+
+
+Started POST "/search/index" for 127.0.0.1 at 2014-11-24 23:51:13 +0000
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oc0/decOJx7ppYBvduIQs91v2iK6LCLaOT8RXFQneyDtSPckXbsXxLEyjjUJkfmSOBuD+U36T3IIRqOBq9zMjw=="}
+  Rendered search/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 70ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 23:51:13 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-24 23:51:13 +0000
+
+
+Started GET "/assets/search-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 23:51:13 +0000
+
+
+Started GET "/assets/application-9168604a64a0d31ed5d3dd84cbf09ab0.css?body=1" for 127.0.0.1 at 2014-11-24 23:51:13 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 23:51:13 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-24 23:51:13 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-24 23:51:13 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-24 23:51:13 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:51:13 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:51:13 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:51:13 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-24 23:51:13 +0000
+
+
+Started POST "/search/index" for 127.0.0.1 at 2014-11-24 23:55:47 +0000
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oc0/decOJx7ppYBvduIQs91v2iK6LCLaOT8RXFQneyDtSPckXbsXxLEyjjUJkfmSOBuD+U36T3IIRqOBq9zMjw=="}
+  Rendered search/index.html.erb within layouts/application (0.6ms)
+Warning. Error encountered while saving cache db675c140da734e3491dfeec38b29c47ca6c7db4/search.css.scssc: can't dump anonymous class #<Class:0x00000001434058>
+
+Completed 200 OK in 105ms (Views: 104.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 23:55:47 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 23:55:47 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-24 23:55:47 +0000
+
+
+Started GET "/assets/search-e253b55e84819792a825a9a90924c5b5.css?body=1" for 127.0.0.1 at 2014-11-24 23:55:47 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-24 23:55:47 +0000
+
+
+Started GET "/assets/application-c48a48a699e378b8099c8e85072b5f71.css?body=1" for 127.0.0.1 at 2014-11-24 23:55:47 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-24 23:55:47 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-24 23:55:47 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:55:47 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:55:47 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:55:47 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-24 23:55:47 +0000
+
+
+Started POST "/search/index" for 127.0.0.1 at 2014-11-24 23:56:13 +0000
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oc0/decOJx7ppYBvduIQs91v2iK6LCLaOT8RXFQneyDtSPckXbsXxLEyjjUJkfmSOBuD+U36T3IIRqOBq9zMjw=="}
+  Rendered search/index.html.erb within layouts/application (0.5ms)
+Warning. Error encountered while saving cache db675c140da734e3491dfeec38b29c47ca6c7db4/search.css.scssc: can't dump anonymous class #<Class:0x00000001434058>
+
+Completed 200 OK in 86ms (Views: 85.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 23:56:13 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-24 23:56:14 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-24 23:56:14 +0000
+
+
+Started GET "/assets/application-19d088aa92d72762388cabcbdd1507cc.css?body=1" for 127.0.0.1 at 2014-11-24 23:56:14 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-24 23:56:14 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 23:56:14 +0000
+
+
+Started GET "/assets/search-aa71bcb4b75c5cda011d5912df1c99c8.css?body=1" for 127.0.0.1 at 2014-11-24 23:56:14 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-24 23:56:14 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:56:14 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:56:14 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:56:14 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-24 23:56:14 +0000
+
+
+Started POST "/search/index" for 127.0.0.1 at 2014-11-24 23:56:46 +0000
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oc0/decOJx7ppYBvduIQs91v2iK6LCLaOT8RXFQneyDtSPckXbsXxLEyjjUJkfmSOBuD+U36T3IIRqOBq9zMjw=="}
+  Rendered search/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 72ms (Views: 71.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 23:56:46 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-24 23:56:46 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-24 23:56:46 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 23:56:46 +0000
+
+
+Started GET "/assets/application-19d088aa92d72762388cabcbdd1507cc.css?body=1" for 127.0.0.1 at 2014-11-24 23:56:46 +0000
+
+
+Started GET "/assets/search-aa71bcb4b75c5cda011d5912df1c99c8.css?body=1" for 127.0.0.1 at 2014-11-24 23:56:46 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-24 23:56:46 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-24 23:56:46 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:56:46 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:56:46 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:56:46 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-24 23:56:46 +0000
+
+
+Started POST "/search/index" for 127.0.0.1 at 2014-11-24 23:58:54 +0000
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oc0/decOJx7ppYBvduIQs91v2iK6LCLaOT8RXFQneyDtSPckXbsXxLEyjjUJkfmSOBuD+U36T3IIRqOBq9zMjw=="}
+  Rendered search/index.html.erb within layouts/application (0.3ms)
+Warning. Error encountered while saving cache db675c140da734e3491dfeec38b29c47ca6c7db4/search.css.scssc: can't dump anonymous class #<Class:0x00000001434058>
+
+Completed 200 OK in 101ms (Views: 100.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 23:58:54 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-24 23:58:54 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-24 23:58:54 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 23:58:54 +0000
+
+
+Started GET "/assets/search-ec1d7b4a78ab743ac7756a3bddee99ee.css?body=1" for 127.0.0.1 at 2014-11-24 23:58:54 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-24 23:58:54 +0000
+
+
+Started GET "/assets/application-9585685ac7f9df78b894ad42261eb694.css?body=1" for 127.0.0.1 at 2014-11-24 23:58:54 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:58:54 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-24 23:58:54 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:58:54 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:58:54 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-24 23:58:54 +0000
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 23:59:32 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-24 23:59:32 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-24 23:59:32 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:59:32 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-24 23:59:32 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-24 23:59:32 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:59:32 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-24 23:59:32 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-24 23:59:32 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-24 23:59:32 +0000
+
+
+Started GET "/search/index" for 127.0.0.1 at 2014-11-25 00:00:56 +0000
+
+ActionController::RoutingError (No route matches [GET] "/search/index"):
+  web-console (2.0.0.beta4) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0.beta4) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0.beta) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0.beta) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.2.0.beta4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0.beta) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0.beta) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0.beta4) lib/rails/engine.rb:514:in `call'
+  railties (4.2.0.beta4) lib/rails/application.rb:161:in `call'
+  rack (1.6.0.beta) lib/rack/tempfile_reaper.rb:15:in `call'
+  rack (1.6.0.beta) lib/rack/lint.rb:49:in `_call'
+  rack (1.6.0.beta) lib/rack/lint.rb:37:in `call'
+  rack (1.6.0.beta) lib/rack/showexceptions.rb:24:in `call'
+  rack (1.6.0.beta) lib/rack/commonlogger.rb:33:in `call'
+  rack (1.6.0.beta) lib/rack/chunked.rb:54:in `call'
+  rack (1.6.0.beta) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0.beta) lib/rack/handler/webrick.rb:89:in `service'
+  /home/ivin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/ivin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/ivin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/routes/_route.html.erb (1.8ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (21.5ms)
+
+
+Started GET "/assets/search-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:01:07 +0000
+Warning. Error encountered while saving cache db675c140da734e3491dfeec38b29c47ca6c7db4/search.css.scssc: can't dump anonymous class #<Class:0x00000001434058>
+
+
+
+Started GET "/assets/application-9168604a64a0d31ed5d3dd84cbf09ab0.css?body=1" for 127.0.0.1 at 2014-11-25 00:01:07 +0000
+
+
+Started GET "/assets/search-99ee5e91a9a545d5841dc895d1de9336.css?body=1" for 127.0.0.1 at 2014-11-25 00:01:07 +0000
+
+
+Started GET "/assets/application-71ce93948ad6611a7202ef07590e9476.css?body=1" for 127.0.0.1 at 2014-11-25 00:01:07 +0000
+
+
+Started POST "/search/index" for 127.0.0.1 at 2014-11-25 00:01:14 +0000
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oc0/decOJx7ppYBvduIQs91v2iK6LCLaOT8RXFQneyDtSPckXbsXxLEyjjUJkfmSOBuD+U36T3IIRqOBq9zMjw=="}
+  Rendered search/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 81ms (Views: 80.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search/index" for 127.0.0.1 at 2014-11-25 00:02:42 +0000
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oc0/decOJx7ppYBvduIQs91v2iK6LCLaOT8RXFQneyDtSPckXbsXxLEyjjUJkfmSOBuD+U36T3IIRqOBq9zMjw=="}
+  Rendered search/index.html.erb within layouts/application (0.1ms)
+Warning. Error encountered while saving cache db675c140da734e3491dfeec38b29c47ca6c7db4/search.css.scssc: can't dump anonymous class #<Class:0x00000001434058>
+
+Completed 200 OK in 145ms (Views: 143.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:02:42 +0000
+
+
+Started GET "/assets/search-650dbbf8186072bedacf6e717e0fe21e.css?body=1" for 127.0.0.1 at 2014-11-25 00:02:42 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-25 00:02:42 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:02:42 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:02:42 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-25 00:02:42 +0000
+
+
+Started GET "/assets/application-8c053fe5da902f7a2ca2f7b17fba9c23.css?body=1" for 127.0.0.1 at 2014-11-25 00:02:42 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-25 00:02:42 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-25 00:02:42 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:02:42 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:02:42 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-25 00:02:42 +0000
+
+
+Started POST "/search/index" for 127.0.0.1 at 2014-11-25 00:04:05 +0000
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oc0/decOJx7ppYBvduIQs91v2iK6LCLaOT8RXFQneyDtSPckXbsXxLEyjjUJkfmSOBuD+U36T3IIRqOBq9zMjw=="}
+  Rendered search/index.html.erb within layouts/application (1.3ms)
+Warning. Error encountered while saving cache db675c140da734e3491dfeec38b29c47ca6c7db4/search.css.scssc: can't dump anonymous class #<Class:0x00000001434058>
+
+Completed 200 OK in 93ms (Views: 92.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:04:05 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-25 00:04:05 +0000
+
+
+Started GET "/assets/search-c926fd84c9a4ea1b8420fbc50787b3b8.css?body=1" for 127.0.0.1 at 2014-11-25 00:04:05 +0000
+
+
+Started GET "/assets/application-97a1b507e4f7f3ea463c622e21257072.css?body=1" for 127.0.0.1 at 2014-11-25 00:04:05 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:04:05 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-25 00:04:05 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-25 00:04:05 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-25 00:04:05 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:04:05 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:04:05 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:04:05 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-25 00:04:05 +0000
+
+
+Started POST "/search/index" for 127.0.0.1 at 2014-11-25 00:04:44 +0000
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oc0/decOJx7ppYBvduIQs91v2iK6LCLaOT8RXFQneyDtSPckXbsXxLEyjjUJkfmSOBuD+U36T3IIRqOBq9zMjw=="}
+  Rendered search/index.html.erb within layouts/application (0.1ms)
+Warning. Error encountered while saving cache db675c140da734e3491dfeec38b29c47ca6c7db4/search.css.scssc: can't dump anonymous class #<Class:0x00000001434058>
+
+Completed 200 OK in 121ms (Views: 119.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:04:44 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:04:44 +0000
+
+
+Started GET "/assets/application-43ada685bf251c1c71f461c0775cfdab.css?body=1" for 127.0.0.1 at 2014-11-25 00:04:44 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-25 00:04:44 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-25 00:04:44 +0000
+
+
+Started GET "/assets/search-b99e4d56553dc2572984f0c0438d89f6.css?body=1" for 127.0.0.1 at 2014-11-25 00:04:44 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-25 00:04:44 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-25 00:04:44 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:04:44 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:04:44 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:04:44 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-25 00:04:44 +0000
+
+
+Started POST "/search/index" for 127.0.0.1 at 2014-11-25 00:05:13 +0000
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oc0/decOJx7ppYBvduIQs91v2iK6LCLaOT8RXFQneyDtSPckXbsXxLEyjjUJkfmSOBuD+U36T3IIRqOBq9zMjw=="}
+  Rendered search/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 84ms (Views: 82.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:05:14 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:05:14 +0000
+
+
+Started GET "/assets/application-43ada685bf251c1c71f461c0775cfdab.css?body=1" for 127.0.0.1 at 2014-11-25 00:05:14 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-25 00:05:14 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-25 00:05:14 +0000
+
+
+Started GET "/assets/search-b99e4d56553dc2572984f0c0438d89f6.css?body=1" for 127.0.0.1 at 2014-11-25 00:05:14 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-25 00:05:14 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:05:14 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-25 00:05:14 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:05:14 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:05:14 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-25 00:05:14 +0000
+
+
+Started POST "/search/index" for 127.0.0.1 at 2014-11-25 00:18:59 +0000
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oc0/decOJx7ppYBvduIQs91v2iK6LCLaOT8RXFQneyDtSPckXbsXxLEyjjUJkfmSOBuD+U36T3IIRqOBq9zMjw=="}
+  Rendered search/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 75ms (Views: 74.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:18:59 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-25 00:18:59 +0000
+
+
+Started GET "/assets/search-b99e4d56553dc2572984f0c0438d89f6.css?body=1" for 127.0.0.1 at 2014-11-25 00:18:59 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:18:59 +0000
+
+
+Started GET "/assets/application-43ada685bf251c1c71f461c0775cfdab.css?body=1" for 127.0.0.1 at 2014-11-25 00:18:59 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-25 00:18:59 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-25 00:18:59 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-25 00:18:59 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:18:59 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:18:59 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:18:59 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-25 00:18:59 +0000
+
+
+Started POST "/search/index" for 127.0.0.1 at 2014-11-25 00:34:06 +0000
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oc0/decOJx7ppYBvduIQs91v2iK6LCLaOT8RXFQneyDtSPckXbsXxLEyjjUJkfmSOBuD+U36T3IIRqOBq9zMjw=="}
+  Rendered search/index.html.erb within layouts/application (0.1ms)
+Warning. Error encountered while saving cache db675c140da734e3491dfeec38b29c47ca6c7db4/search.css.scssc: can't dump anonymous class #<Class:0x00000001434058>
+
+Completed 200 OK in 139ms (Views: 138.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:34:06 +0000
+
+
+Started GET "/assets/search-a67e392c7f7aba4ddad8aa6c00b1773d.css?body=1" for 127.0.0.1 at 2014-11-25 00:34:06 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-25 00:34:06 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:34:06 +0000
+
+
+Started GET "/assets/application-3c863701f7a185bb653733bb6772a0a7.css?body=1" for 127.0.0.1 at 2014-11-25 00:34:06 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-25 00:34:06 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-25 00:34:06 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-25 00:34:06 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:34:06 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:34:06 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:34:06 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-25 00:34:06 +0000
+
+
+Started GET "/search/index" for 127.0.0.1 at 2014-11-25 00:35:55 +0000
+
+ActionController::RoutingError (No route matches [GET] "/search/index"):
+  web-console (2.0.0.beta4) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0.beta4) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0.beta4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0.beta4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0.beta) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0.beta) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.2.0.beta4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0.beta) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0.beta4) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0.beta) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0.beta4) lib/rails/engine.rb:514:in `call'
+  railties (4.2.0.beta4) lib/rails/application.rb:161:in `call'
+  rack (1.6.0.beta) lib/rack/tempfile_reaper.rb:15:in `call'
+  rack (1.6.0.beta) lib/rack/lint.rb:49:in `_call'
+  rack (1.6.0.beta) lib/rack/lint.rb:37:in `call'
+  rack (1.6.0.beta) lib/rack/showexceptions.rb:24:in `call'
+  rack (1.6.0.beta) lib/rack/commonlogger.rb:33:in `call'
+  rack (1.6.0.beta) lib/rack/chunked.rb:54:in `call'
+  rack (1.6.0.beta) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0.beta) lib/rack/handler/webrick.rb:89:in `service'
+  /home/ivin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/ivin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/ivin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/routes/_route.html.erb (1.9ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/ivin/.rvm/gems/ruby-2.1.2/gems/web-console-2.0.0.beta4/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (18.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 84ms (Views: 83.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/search-a67e392c7f7aba4ddad8aa6c00b1773d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/application-3c863701f7a185bb653733bb6772a0a7.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 66ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/search-a67e392c7f7aba4ddad8aa6c00b1773d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/application-3c863701f7a185bb653733bb6772a0a7.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:09 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 54ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/search-a67e392c7f7aba4ddad8aa6c00b1773d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/application-3c863701f7a185bb653733bb6772a0a7.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 63ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/application-3c863701f7a185bb653733bb6772a0a7.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/search-a67e392c7f7aba4ddad8aa6c00b1773d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 60ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/search-a67e392c7f7aba4ddad8aa6c00b1773d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/application-3c863701f7a185bb653733bb6772a0a7.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 67ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/search-a67e392c7f7aba4ddad8aa6c00b1773d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/application-3c863701f7a185bb653733bb6772a0a7.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 00:36:10 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 66ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:11 +0000
+
+
+Started GET "/assets/search-a67e392c7f7aba4ddad8aa6c00b1773d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:11 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:11 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:11 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:11 +0000
+
+
+Started GET "/assets/application-3c863701f7a185bb653733bb6772a0a7.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:11 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:11 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:11 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:11 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:11 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:11 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:11 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 00:36:13 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 72ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:13 +0000
+
+
+Started GET "/assets/application-3c863701f7a185bb653733bb6772a0a7.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:13 +0000
+
+
+Started GET "/assets/search-a67e392c7f7aba4ddad8aa6c00b1773d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:13 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:13 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:13 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:13 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:13 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:13 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:13 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:13 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:13 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:13 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 00:36:15 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 58ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:15 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:15 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:15 +0000
+
+
+Started GET "/assets/search-a67e392c7f7aba4ddad8aa6c00b1773d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:15 +0000
+
+
+Started GET "/assets/application-3c863701f7a185bb653733bb6772a0a7.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:15 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:15 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:15 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:15 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:15 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:15 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:15 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:15 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 00:36:16 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 65ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:16 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:16 +0000
+
+
+Started GET "/assets/application-3c863701f7a185bb653733bb6772a0a7.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:16 +0000
+
+
+Started GET "/assets/search-a67e392c7f7aba4ddad8aa6c00b1773d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:16 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:16 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 00:36:16 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:16 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:16 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:16 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:16 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:16 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-25 00:36:16 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 12:46:09 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 247ms (Views: 246.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datasources-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 12:46:09 +0000
+
+
+Started GET "/assets/search-a67e392c7f7aba4ddad8aa6c00b1773d.css?body=1" for 127.0.0.1 at 2014-11-25 12:46:09 +0000
+
+
+Started GET "/assets/scaffolds-896f41cb72cd73f2022e1a1464fca5c2.css?body=1" for 127.0.0.1 at 2014-11-25 12:46:09 +0000
+
+
+Started GET "/assets/jquery_ujs-ae280aaa31faeb1eb0139b5cd60e3356.js?body=1" for 127.0.0.1 at 2014-11-25 12:46:09 +0000
+
+
+Started GET "/assets/jquery-dfb1e594c3e61a04cc388702c3feec1f.js?body=1" for 127.0.0.1 at 2014-11-25 12:46:09 +0000
+
+
+Started GET "/assets/application-3c863701f7a185bb653733bb6772a0a7.css?body=1" for 127.0.0.1 at 2014-11-25 12:46:09 +0000
+
+
+Started GET "/assets/turbolinks-60c7d150bd7b7a75d67e6d1f0d4129a6.js?body=1" for 127.0.0.1 at 2014-11-25 12:46:09 +0000
+
+
+Started GET "/assets/users-c15e1c77cb5b3534b610348cb9f3c56d.css?body=1" for 127.0.0.1 at 2014-11-25 12:46:09 +0000
+
+
+Started GET "/assets/datasources-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 12:46:09 +0000
+
+
+Started GET "/assets/search-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 12:46:09 +0000
+
+
+Started GET "/assets/application-c3205a9b9d7d749e887f339b21c3e510.js?body=1" for 127.0.0.1 at 2014-11-25 12:46:09 +0000
+
+
+Started GET "/assets/users-5cf9e471f6dbffd4600ae141132a5888.js?body=1" for 127.0.0.1 at 2014-11-25 12:46:09 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 12:46:20 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 225ms (Views: 223.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 12:46:22 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 211ms (Views: 209.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 12:46:23 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 227ms (Views: 225.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 12:46:23 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 207ms (Views: 205.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 12:46:25 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 235ms (Views: 233.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 12:46:36 +0000
+Processing by SearchController#index as HTML
+  Rendered search/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 214ms (Views: 212.3ms | ActiveRecord: 0.0ms)

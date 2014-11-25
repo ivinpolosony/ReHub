@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Datasource type:</strong>
+  <%= @datasource.datasource_type %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @datasource.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_datasource_path(@datasource) %> |
+<%= link_to 'Back', datasources_path %>

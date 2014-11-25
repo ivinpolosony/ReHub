@@ -1,0 +1,16 @@
+// Place all the styles related to the search controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    background-color: white;
+}
+.search_form {
+	position: fixed;
+top: 359px;
+right: 471px;
+
+}
+.search_text{
+	text-indent: center;
+	font-size: 41px;
+}
