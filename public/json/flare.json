@@ -1,0 +1,11 @@
+{
+ "name": "flare",
+ "children": [
+
+  {
+   "name": "animate",
+   "children": [
+    {"name": "Easing", "size": 2781
+   }	
+ ]
+}

@@ -1,0 +1,14 @@
+{
+ "name": "flare",
+ "children": [
+
+  {
+   "name": "animate",
+   "children": [
+    {"name": "Easing", "size": 17010},
+   	{"name": "Easing", "size": 17010},
+    {"name": "FunctionSequence", "size": 5842}]
+  }	
+ ]
+}
+

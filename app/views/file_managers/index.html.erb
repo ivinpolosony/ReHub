@@ -1,0 +1,17 @@
+
+<% if current_user %>
+<%= form_tag( "/index" ,  multipart: true) do %>
+    <center><h4>Please upload your query document:</h4></center>
+    <center><%= file_field_tag 'query' %></center>
+    <center><h4>Please upload the files you want to compare the query with:</h4></center>
+ <% (1..5).each do |k| %> 
+   <center><%=file_field_tag "file#{k}" %>
+  <% end %> 
+<center><%= submit_tag("Analyze") %>
+<% end %>
+
+<% else %>
+ <script type="text/javascript">
+    window.location.href="/users/sign_in/" // put your correct path in a string here
+  </script>
+<% end %>

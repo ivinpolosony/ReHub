@@ -1,6 +1,37 @@
 <div class="input-group input-group-lg">
-<form class="search_form">
-  <input type="text" class="search_text" placeholder="Search">
+<!-- <form class="search_form" method="post" action="/search" > -->
+
+<%= form_tag('/search',class: 'search_form') do -%>
+  <input name = 'query' type="text" class="search_text" placeholder="Search">
   <input type="submit" class="search_text">
-</form>
+<% end %>
+
+
+
 </div>
+ <%= @strWord.first %>
+<%= @str1 %>
+
+
+ <% @i = 0 %>
+ <% @arrA.each do |variable| %>
+<% #if variable == '\n' %>
+<% @i += 1  -%>
+
+<%= @str+@i %>
+<% # end %> 
+
+
+ 
+ <%= @i %>
+
+<%end %>  
+
+
+
+
+  
+<%= form_tag 'search/read', :multipart => true do %>
+   <label for="file">Upload text File</label> <%= file_field_tag "file" %>
+   <%= submit_tag %>
+<% end %>

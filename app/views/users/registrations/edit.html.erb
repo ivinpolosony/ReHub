@@ -1,0 +1,56 @@
+<%= link_to "Back", :back %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'form-horizontal' }) do |f| %>
+  <%= devise_error_messages! %>
+  <div class="form-group">
+    <h2 class="col-sm-offset-2 col-sm-3">Edit <%= resource_name.to_s.humanize %></h2>
+  </div>
+  <div class="form-group">
+    <%= f.label :user_name, class: 'col-sm-2 control-label' %>    
+    <div class="col-sm-3">
+      <%= f.text_field :user_name, class: 'form-control', autofocus: true %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email, class: 'col-sm-2 control-label' %>
+    <div class="col-sm-3">
+      <%= f.email_field :email, class: 'form-control', autofocus: true %>
+    </div>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :password, class: 'col-sm-2 control-label' %> <i>(leave blank if you don't want to change it)</i>
+    <div class="col-sm-3">
+      <%= f.password_field :password, class: 'form-control', autocomplete: "off" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password_confirmation, class: 'col-sm-2 control-label' %>    
+    <div class="col-sm-3">
+      <%= f.password_field :password_confirmation, class: 'form-control', autocomplete: "off" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :current_password, class: 'col-sm-2 control-label' %> <i>(we need your current password to confirm your changes)</i><br />
+    <div class="col-sm-3">
+      <%= f.password_field :current_password, class: 'form-control', autocomplete: "off" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-3">
+      <%= f.submit "Update", class: "btn btn-primary" %>
+    </div>
+  </div>
+
+<% end %>
+<hr></hr>
+  <h4>Cancel my account</h4>
+
+  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>

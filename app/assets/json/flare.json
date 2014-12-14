@@ -1,0 +1,44 @@
+{
+		 "name": "flare",
+		 "children": [
+
+		  
+		   {
+		   	"name": "somefile1.pdf",
+		   "children": [
+		    {"name": "home==> somefile1.pdf", "size":185 }
+		   
+			 ,{"name": "data==> somefile1.pdf", "size":146 }
+		   
+			 ,{"name": "device==> somefile1.pdf", "size":95 }
+		   
+			 ,{"name": "information==> somefile1.pdf", "size":80 }
+		   
+			 ,{"name": "server==> somefile1.pdf", "size":72 }
+		   
+			
+
+			]
+		  }	
+		
+		 ,
+		   {
+		   	"name": "06681095.pdf",
+		   "children": [
+		    {"name": "security==> 06681095.pdf", "size":102 }
+		   
+			 ,{"name": "cloud==> 06681095.pdf", "size":92 }
+		   
+			 ,{"name": "computing==> 06681095.pdf", "size":87 }
+		   
+			 ,{"name": "information==> 06681095.pdf", "size":48 }
+		   
+			 ,{"name": "federal==> 06681095.pdf", "size":44 }
+		   
+			
+
+			]
+		  }	
+		
+		]
+	}

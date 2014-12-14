@@ -1,18 +1,37 @@
 Rails.application.routes.draw do
-  post 'search/index'
 
-  resources :datasources
-
-  resources :users
-
-  root 'search#index'
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'file_managers#index'
+  post '/index' => 'file_managers#index'
 
-  # Example of regular route:
+ # get 'bubble_chart' => 'file_managers#bubble_chart'
+  #post 'bubble_chart' => 'file_managers#bubble_chart'
+  get '/new' => 'file_managers#new'
+
+  get '/search' => 'search#index'
+  post '/search' => 'search#index'
+
+  get "load" => 'upload#load'
+  get '/bubble_chart' => 'upload#bubble_chart'
+  post '/bubble_chart' => 'upload#bubble_chart'
+  
+  get '/upload' => 'upload#index'
+  post '/upload' => 'upload#index'
+
+  
+  post '/upload/uploadFile' => 'upload#uploadFile'
+
+  get '/search/read' => 'search#read'
+
+  get '/cosine' => 'upload#cosine_sim' 
+  get '/length' => 'upload#length' 
+
+
+   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
