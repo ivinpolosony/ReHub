@@ -5,19 +5,25 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'file_managers#index'
-  post '/index' => 'file_managers#index'
+  root 'file_managers#home'
+  get '/tf' => 'file_managers#index'
+  
+  get '/cosine' => 'file_managers#sim'
+  post '/cosine' => 'file_managers#sim' 
+  
+  post '/bubble_chart' => 'file_managers#bubble_chart'
 
  # get 'bubble_chart' => 'file_managers#bubble_chart'
   #post 'bubble_chart' => 'file_managers#bubble_chart'
   get '/new' => 'file_managers#new'
+  post '/new' => 'file_managers#new'
+
 
   get '/search' => 'search#index'
   post '/search' => 'search#index'
 
   get "load" => 'upload#load'
   get '/bubble_chart' => 'upload#bubble_chart'
-  post '/bubble_chart' => 'upload#bubble_chart'
   
   get '/upload' => 'upload#index'
   post '/upload' => 'upload#index'
@@ -27,7 +33,6 @@ Rails.application.routes.draw do
 
   get '/search/read' => 'search#read'
 
-  get '/cosine' => 'upload#cosine_sim' 
   get '/length' => 'upload#length' 
 
 

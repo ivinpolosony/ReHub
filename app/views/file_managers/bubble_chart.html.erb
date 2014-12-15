@@ -1,13 +1,4 @@
-
-<%= form_tag({action: :bubble_chart}, multipart: true, name: 'file') do %>
- <% @f.each do |chk| %> 
- <br>
-   <%=check_box_tag "file[]", "#{chk}" %>
-   <%=chk %> <br/>
-  <% end %> 
-<%= submit_tag("Analyze") %>
-<% end %>
-<%=@hello%>
+ 
 <style>
 
 text {
@@ -16,6 +7,7 @@ text {
 
 </style>
 <body>
+<center>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
@@ -74,3 +66,5 @@ function classes(root) {
 d3.select(self.frameElement).style("height", diameter + "px");
 
 </script>
+</center>
+</body>

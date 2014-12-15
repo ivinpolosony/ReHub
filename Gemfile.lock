@@ -6,7 +6,7 @@ GIT
 
 GIT
   remote: https://github.com/rclacerna/tf_idf_hash_gem.git
-  revision: 3e1e46c9ceed0eedebf73e68a0b957d418e07799
+  revision: 949f08018d7273fe8719ff83744c7499d65fddda
   specs:
     tf_idf_hash (0.0.1)
 
@@ -43,7 +43,6 @@ GEM
     afm (0.2.2)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.9)
-    bcrypt (3.1.9-x86-mingw32)
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
     builder (3.2.2)
@@ -90,11 +89,9 @@ GEM
     matrix (0.0.1)
     mime-types (2.4.3)
     mini_portile (0.6.1)
-    minitest (5.4.3)
+    minitest (5.5.0)
     multi_json (1.10.1)
     nokogiri (1.6.5)
-      mini_portile (~> 0.6.0)
-    nokogiri (1.6.5-x86-mingw32)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
     pdf-reader (1.3.3)
@@ -104,7 +101,6 @@ GEM
       ruby-rc4
       ttfunk
     pg (0.17.1)
-    pg (0.17.1-x86-mingw32)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -164,7 +160,6 @@ GEM
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
     sqlite3 (1.3.10)
-    sqlite3 (1.3.10-x86-mingw32)
     tf-idf-similarity (0.1.4)
     thor (0.19.1)
     thread_safe (0.3.4)
@@ -174,8 +169,6 @@ GEM
       coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2014.10)
-      tzinfo (>= 1.0.0)
     uglifier (2.6.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
@@ -186,7 +179,6 @@ GEM
 
 PLATFORMS
   ruby
-  x86-mingw32
 
 DEPENDENCIES
   Cosine_similarity_hash (~> 0.0.2)!

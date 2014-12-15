@@ -1,0 +1,27 @@
+    <% if current_user %>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+    p{
+        padding: 50px;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        background: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+           <a href="/tf"> <div class="col-md-40"><p>Term frequency in the Corpus</p></div> </a>
+       
+        </div>
+        <div class="row">
+
+           <a href="/new">   <div class="col-md-40"><p>Document Similarity against your query document </p></div></a>
+        </div>
+       
+    </div>
+</body>
+</html>  
+    <% end %> 

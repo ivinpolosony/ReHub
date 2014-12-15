@@ -1,17 +1,38 @@
 
-<% if current_user %>
-<%= form_tag( "/index" ,  multipart: true) do %>
-    <center><h4>Please upload your query document:</h4></center>
-    <center><%= file_field_tag 'query' %></center>
-    <center><h4>Please upload the files you want to compare the query with:</h4></center>
- <% (1..5).each do |k| %> 
-   <center><%=file_field_tag "file#{k}" %>
-  <% end %> 
-<center><%= submit_tag("Analyze") %>
-<% end %>
 
-<% else %>
- <script type="text/javascript">
-    window.location.href="/users/sign_in/" // put your correct path in a string here
-  </script>
-<% end %>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+    p{
+        padding: 50px;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        background: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+			<% if current_user %>
+			<%= form_tag( "/bubble_chart" ,  multipart: true) do %>
+			   
+           <a href="/tf"> <div class="col-md-20"><p>Please upload the files you want to find term frequencies</p></div> </a>
+			 <div class="col-md-20">
+			 <% (1..5).each do |k| %> 
+			   <center><%=file_field_tag "file#{k}" %>  
+			  <% end %> 
+			<center><%= submit_tag("Analyze") %>
+			<% end %>
+			</div>
+			<% else %>
+			 <script type="text/javascript">
+			    window.location.href="/users/sign_in/" // put your correct path in a string here
+			  </script>
+			<% end %>
+       
+        </div>
+        
+    </div>
+</body>
+</html>  

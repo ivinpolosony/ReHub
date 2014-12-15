@@ -1,0 +1,50 @@
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+    p{
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        background: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+			<% if current_user %>
+			<%= form_tag( "/new" ,  multipart: true) do %>
+			   <a href="/new"> <div class="col-md-20"><p>Query Document </p></div> </a>
+			   	   <center><%=file_field_tag "query" %>  
+			   <a href="/new"> <div class="col-md-20"><p>Please upload the files you want to find similarities</p></div> </a>
+			 <div class="col-md-20">
+			 <% (1..5).each do |k| %> 
+			   <center><%=file_field_tag "file#{k}" %>  
+			  <% end %> 
+			<center><%= submit_tag("Analyze") %>
+			<% end %>
+			</div>
+			<% else %>
+			 <script type="text/javascript">
+			    window.location.href="/users/sign_in/" // put your correct path in a string here
+			  </script>
+			<% end %>
+       
+        </div>
+        
+    </div>
+</body>
+</html>  
+	<% if @out.present? %>
+	<hr> 
+	<center> The Document <b>" <%=	@out.first[0] %> " </b> is most simillar to document ==> <%= @quName %> </center>
+	<% @out.each do |out , cnt| %>
+		<hr> 
+		<center><%= out %> =====> 
+		<%= cnt.round(2) %><center>
+		<hr>
+
+	<% end %>
+	<% end %> 

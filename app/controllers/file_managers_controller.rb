@@ -1,12 +1,19 @@
 class FileManagersController < ApplicationController
+
+  def home 
+
+  end 		
   def index
 
 
   	   uploaded_io_arr = params
 		p "£"*10 
 		(1..5).each do |k|
-			if uploaded_io_arr["file1"] 
-  	   			p uploaded_io_arr["file1"].original_filename
+			if uploaded_io_arr["file#{k}"].present?
+  	   			fn  = uploaded_io_arr["file#{k}"].original_filename
+  	   			if 0 != self.file_check(fn)
+  	   				
+  	   			end 
   	   		end 	
   	  	end 
 
@@ -14,7 +21,7 @@ class FileManagersController < ApplicationController
 	#	p  request.headers["CONTENT_TYPE"]
 		#uploaded_io_arr = uploaded_io_arr.split(',')
 		#p uploaded_io[0]
-      self.file_check(uploaded_io_arr)
+      
 	  	
   		@f = []	
 	  @arrCorpus = {}
@@ -34,38 +41,34 @@ class FileManagersController < ApplicationController
 
 
 def bubble_chart 
-	  @f = []	
+	  fileHash = {}
 	  @arrCorpus = {}
-	  @arrDir = Dir.glob("public/files/*")
-	  @arrDir.each do |file1|
-	  	@filepdf = file1.split('/')
-	  	@f << @filepdf[2]
-      end
+	  p "$"*10 
+	  (1..5).each do |k|
+		  if params["file#{k}"].present? 
+		  		if 1 == self.file_check(params["file#{k}"].original_filename)
+		  			break
+		  		else 
+		  			p "%"*10
+		  			@arrA = [] 
+		  			file = params["file#{k}"].original_filename
+		  			filePath = params["file#{k}"].tempfile.path
+		  			p fh = File.open(filePath)
+					PDF::Reader.open(fh) do |reader| #Gem pdf-reader
+					reader.pages.each do |page|
+						@arrA << page.text
+					end #reader
+					end # PDF:reader
+					@strFullReadStringDoc = @arrA.join(" ") 
+					@corpus = self.term_count(@strFullReadStringDoc) 
+					@arrCorpus[file] =  @corpus 
+		  		end 	
+		  end 	
+	  end 
 
-      if request.post?
-	    @arrSelectedFiles = params[:file]
-	    @value = []
-	    @value = @arrSelectedFiles
-	  # FILE NAME ITERATION 
-		  # ITERATION OF FILES  
-		@value.each do |fname|
-		  	uploaded_io = fname
-	        @fileName = uploaded_io
-	        fileHandle = File.expand_path(Rails.root.join('public', 'files', @fileName)) # File handle
-	        @arrA = []
-	        PDF::Reader.open(fileHandle) do |reader| #Gem pdf-reader
-	          reader.pages.each do |page|
-	            @arrA << page.text
-	          end #reader
-	        end # PDF:reader
-	        @strFullReadStringDoc = @arrA.join(" ") 
-	        @corpus = self.term_count(@strFullReadStringDoc) 
-    		@arrCorpus[fname] =  @corpus 
-          
-		 end # each fname
-		 self.json_write_bubble(@arrCorpus)  
-		 flash[:notice] = @arrSelectedFiles
-	  end # if POST  
+	  self.json_write_bubble(@arrCorpus)
+	 
+
 
 end 
 
@@ -159,45 +162,83 @@ def term_count(doc1)
 
 
  def new
+ 	#QUERY 
 
- 	@arrSelectedFiles = ["Document2.pdf", "Document1.pdf", "Document3.pdf" ] 
+if request.post?
+	@arrA = []
+	@arrA1 = []
 
- 	@filename_n_wordcount = []
-	    @value = []
-	    @value = @arrSelectedFiles
-	    @doc_num = @arrSelectedFiles.length
-	  # FILE NAME ITERATION 
-		  # ITERATION OF FILES  
-		@value.each do |fname|
-		  	uploaded_io = fname
-	        @fileName = uploaded_io
-	        fileHandle = File.expand_path(Rails.root.join('public', 'files', @fileName)) # File handle
-	        @arrA = []
-	        PDF::Reader.open(fileHandle) do |reader| #Gem pdf-reader
-	          reader.pages.each do |page|
-	            @arrA << page.text
-	          end #reader
-	        end # PDF:reader
-	        @strFullReadStringDoc = @arrA.join(" ") 
+	@filename_n_wordcount = []
+	@filename_n_wordcount1 = []
 
-	        hash = {:key => @fileName, :value => @strFullReadStringDoc}
-	        document1 = TfIdfSimilarity::Document.new(hash[:value])
-	        term_n_counts = document1.term_counts
-	        @data = {:key => @fileName, :value => term_n_counts}
+ 	file_count  = 0
 
-	      @filename_n_wordcount << @data
+ 	if params["query"].present? 
+ 		@quName = params["query"].original_filename
+ 		if 1 == self.file_check(params["query"].original_filename)
+		   p "query required"
+		 else 
+		 		file1 = params["query"].original_filename
+		  		filePath1 = params["query"].tempfile.path
+ 					fh1 = File.open(filePath1)
+					PDF::Reader.open(fh1) do |reader| #Gem pdf-reader
+					reader.pages.each do |page|
+						@arrA1 << page.text
+					end #reader
+					end # PDF:reader
+					p "@arrA1"*10 
 
-	     end 
-#p @filename_n_wordcount.length
+					@strFullReadStringDoc1 = @arrA1.join(" ") 
+					p @strFullReadStringDoc1
+						hash = {:key => file1, :value => @strFullReadStringDoc1}
+						document1 = TfIdfSimilarity::Document.new(hash[:value])
+						term_n_counts = document1.term_counts
+						@data1 = {:key => file1, :value => term_n_counts}
+						@filename_n_wordcount1 << @data1
+ 		end 
+ 	end 
+ #p "$£"*10 
+  @query = @filename_n_wordcount1
+
+ 	#FILES 
+ 	(1..5).each do |k|
+		  if params["file#{k}"].present? 
+		  		if 1 == self.file_check(params["file#{k}"].original_filename)
+		  			break
+		  		else 
+		  		file = params["file#{k}"].original_filename
+		  		filePath = params["file#{k}"].tempfile.path
+		  		file_count  = file_count + 1
+		  		fh = File.open(filePath)
+					PDF::Reader.open(fh) do |reader| #Gem pdf-reader
+					reader.pages.each do |page|
+						@arrA << page.text
+					end #reader
+					end # PDF:reader
+					@strFullReadStringDoc = @arrA.join(' ') 
+						hash = {:key => file, :value => @strFullReadStringDoc}
+						document1 = TfIdfSimilarity::Document.new(hash[:value])
+						term_n_counts = document1.term_counts
+						@data = {:key => file, :value => term_n_counts}
+						@filename_n_wordcount << @data
+		  		end 
+		  end 
+	end 
+	# FILES END 
+ 	@doc_num = file_count
+	p @out = self.sim( @filename_n_wordcount ,@doc_num ,   @query )
+	
+	@out = @out.sort_by {|_key, value| value}
 
 
-p	 @out = self.sim( @filename_n_wordcount ,@doc_num  )
- end 
 
- def sim(filename_n_wordcount ,doc_num)
+end 
+ end # FUNCITON 
 
+ def sim(filename_n_wordcount ,doc_num , query )
 =begin
- 	@tf_idf = {
+
+ 	tf_idf = {
 			"Document1.pdf"=>
 					{
 					"new"=>0.584, 
@@ -228,27 +269,44 @@ p	 @out = self.sim( @filename_n_wordcount ,@doc_num  )
 			    }
 		    }
 
-
 =end
+#p "DOC #{doc_num} OUT #{filename_n_wordcount} "
+
+
+=begin
 
  	@query =  {
 			"Document1.pdf"=>
 					{"los"=>0.477085, "angeles"=>0.477085, "times"=>0.0, "new"=>0.0, "york"=>0.0, "post"=>1.585}
 			 }
+=end
+	objQuery = Tf_idf_hash.new(query , 1)
+	query  = 	objQuery.tf_idf( objQuery.tf(), objQuery.idf() )
+
+
  	objTf_idf = Tf_idf_hash.new(filename_n_wordcount, doc_num)
+
+ 	 objTf_idf.tf()
+ 	p "!"*10
+	 objTf_idf.idf()
  	 tf_idf = 	objTf_idf.tf_idf( objTf_idf.tf(), objTf_idf.idf() )
  	objCsh =Cosine_similarity_hash.new
- 	 cosine = objCsh.cosine_sim(tf_idf , @query)
+ 	return  cosine = objCsh.cosine_sim(tf_idf , query)
  	 
  end 
 
 
 
 def file_check(file_arr)
-	p "FILE"*10
-	    MIME::Types.type_for("filename.gif").first.content_type
-		
-
+	
+	mime_type = MIME::Types.type_for(file_arr).first.content_type
+	 if mime_type != "application/pdf"
+	 		flash1 =  "ONLY PDF FILES ARE ALLOWED, FILE #{file_arr} IS NOT A PDF" 
+  	   		flash[:notice] = flash1
+  	   		return 1
+	 end
+	 return 0  		
+	  
 end 
 
 
