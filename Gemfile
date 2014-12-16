@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
-ruby '2.1.2'
 
+gem 'rails-observers'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
 # Use SCSS for stylesheets
@@ -57,10 +57,12 @@ group :development do
 end
 
 group :test do
-	gem 'capybara'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'factory_girl_rails'
 end
 
 group :production do
 	gem 'pg'
-	gem 'rails_12factor'
 end
